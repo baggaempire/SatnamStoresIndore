@@ -1327,7 +1327,7 @@ h3 {
 }
 
 .about-hero {
-  padding-top: 34px;
+  padding-top: 8px;
 }
 
 .about-hero-grid,
@@ -1336,7 +1336,13 @@ h3 {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 26px;
-  align-items: center;
+  align-items: start;
+}
+
+.about-hero-copy {
+  display: grid;
+  gap: 16px;
+  align-content: start;
 }
 
 .about-hero-visual img,
@@ -1418,6 +1424,10 @@ h3 {
 
 .store-detail-card p + p {
   margin-top: 10px;
+}
+
+.store-detail-card-inline {
+  margin-top: 8px;
 }
 
 @media (max-width: 1120px) {

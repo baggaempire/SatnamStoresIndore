@@ -1,4 +1,4 @@
-const WHATSAPP_NUMBER = "19199854545";
+const WHATSAPP_NUMBER = "919926552340";
 const CART_STORAGE_KEY = "satnam-indore-cart";
 const ORDER_FORM_STORAGE_KEY = "satnam-indore-order-form";
 
