@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Satnam Stores Indore | Grocery, Snacks & Daily Essentials</title>
+  <title>Satnam Stores Indore | Grocery Ordering, Snacks & Daily Essentials</title>
   <meta
     name="description"
-    content="Satnam Stores in Indore offers snacks, drinks, ice cream, sweets, biscuits, pantry staples, and everyday essentials in a clean, modern grocery-style shopping experience."
+    content="Order groceries, snacks, drinks, dairy, pantry items, and daily essentials from Satnam Stores in Indore through a clean WhatsApp ordering experience."
   >
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,18 +16,20 @@
   >
   <link rel="stylesheet" href="./styles.css">
 </head>
-<body>
+<body data-page="home">
   <div class="topbar">
     <div class="container topbar-inner">
       <p>Everyday essentials, snacks &amp; drinks available now</p>
-      <a href="tel:+919926552340">+91 9926552340</a>
+      <a href="tel:+19199854545">+1 919 985 4545</a>
     </div>
   </div>
 
   <header class="site-header" id="top">
     <div class="container header-main">
       <a class="brand" href="#top" aria-label="Satnam Stores Indore home">
-        <span class="brand-badge">S</span>
+        <span class="brand-badge">
+          <img src="./assets/khanda-symbol.webp" alt="Khanda symbol logo">
+        </span>
         <span class="brand-copy">
           <strong>Satnam Stores</strong>
           <span>Indore, Madhya Pradesh</span>
@@ -43,7 +45,7 @@
           id="site-search"
           name="q"
           type="search"
-          placeholder="Search snacks, cold drinks, ice cream, sweets, daily essentials"
+          placeholder="Search milk, chips, cold drinks, candy, ice cream, bread, atta and more"
           autocomplete="off"
         >
         <button type="submit">Search</button>
@@ -54,8 +56,11 @@
           <span class="header-chip-label">Location</span>
           <strong>Indore, MP</strong>
         </a>
-        <a class="header-button header-button-light" href="tel:+919926552340">Call</a>
-        <a class="header-button header-button-primary" href="https://wa.me/919926552340" target="_blank" rel="noreferrer">Order Online</a>
+        <a class="header-button header-button-light" href="tel:+19199854545">Call</a>
+        <button class="header-button header-button-primary cart-launch" type="button" data-open-cart>
+          <span>View Cart</span>
+          <span class="cart-count-badge" data-cart-count>0</span>
+        </button>
       </div>
 
       <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-panel">
@@ -68,25 +73,25 @@
 
     <div class="container mobile-panel" id="mobile-panel">
       <nav class="mobile-links" aria-label="Mobile">
-        <a href="#categories">Categories</a>
+        <a href="#top">Home</a>
+        <a href="#catalog">Products</a>
         <a href="#deals">Deals</a>
-        <a href="#top-picks">Top Picks</a>
-        <a href="#gallery">Gallery</a>
-        <a href="#visit">Visit Store</a>
+        <a href="./about.html">About Us</a>
       </nav>
+      <button class="mobile-cart-link" type="button" data-open-cart>
+        View Cart
+        <span class="cart-count-badge" data-cart-count>0</span>
+      </button>
     </div>
   </header>
 
   <div class="category-strip-wrap">
     <div class="container">
-      <nav class="category-strip" aria-label="Product categories">
-        <a href="#categories" data-query="snacks">Snacks</a>
-        <a href="#categories" data-query="drinks">Drinks</a>
-        <a href="#categories" data-query="ice cream">Ice Cream</a>
-        <a href="#categories" data-query="sweets">Sweets</a>
-        <a href="#categories" data-query="biscuits">Biscuits</a>
-        <a href="#categories" data-query="pantry">Pantry</a>
-        <a href="#categories" data-query="essentials">Daily Essentials</a>
+      <nav class="category-strip" aria-label="Primary sections">
+        <a href="#top" data-nav-link="home" class="is-active">Home</a>
+        <a href="#catalog" data-nav-link="products">Products</a>
+        <a href="#deals" data-nav-link="deals">Deals</a>
+        <a href="./about.html" data-nav-link="about">About Us</a>
       </nav>
     </div>
   </div>
@@ -98,29 +103,29 @@
           <p class="eyebrow">Your local grocery destination</p>
           <h1>Everything you need. All in one stop.</h1>
           <p class="hero-text">
-            Snacks, cold drinks, ice cream, sweets, and daily essentials ready for quick pickup,
-            family convenience, and everyday value.
+            Browse dairy, pantry staples, bakery picks, beverages, and instant grocery essentials,
+            then place your order directly on WhatsApp in minutes.
           </p>
           <div class="hero-actions">
-            <a class="button button-primary" href="#top-picks">Shop Now</a>
-            <a class="button button-secondary" href="#visit">Visit Store</a>
+            <a class="button button-primary" href="#catalog">Start Shopping</a>
+            <button class="button button-secondary" type="button" data-open-cart>Open Cart</button>
           </div>
           <ul class="hero-metrics">
-            <li><strong>7+</strong><span>everyday categories</span></li>
-            <li><strong>Fast</strong><span>grab-and-go shopping</span></li>
-            <li><strong>Real</strong><span>photos from the store</span></li>
+            <li><strong>23+</strong><span>orderable grocery items</span></li>
+            <li><strong>Pickup</strong><span>or delivery via WhatsApp</span></li>
+            <li><strong>Fast</strong><span>mobile-first ordering flow</span></li>
           </ul>
         </div>
 
         <div class="hero-visual">
           <img src="./assets/storefront.jpg" alt="Satnam Stores storefront in Prem Nagar, Indore">
           <div class="hero-card hero-card-top">
-            <span class="card-kicker">Store pickup</span>
-            <strong>Cold drinks, sweets, biscuits &amp; more</strong>
+            <span class="card-kicker">Order online</span>
+            <strong>Add items, review cart, and send your order on WhatsApp</strong>
           </div>
           <div class="hero-card hero-card-bottom">
             <span class="card-kicker">Prem Nagar, Indore</span>
-            <strong>Trusted neighborhood grocery stop</strong>
+            <strong>Neighborhood convenience with a retail-style experience</strong>
           </div>
         </div>
       </div>
@@ -133,8 +138,8 @@
           <h2>Modern convenience with the categories people use most</h2>
         </div>
         <div class="trusted-points">
-          <p>Snacks, coolers, sweets, biscuits, instant bites, and daily essentials in one clean stop.</p>
-          <p>Built to feel organized, quick to shop, and easy to revisit any day of the week.</p>
+          <p>Order milk, butter, dahi, pantry staples, bakery picks, drinks, and instant grocery essentials from one organized storefront.</p>
+          <p>The experience keeps the trust-building retail homepage while adding a simple, beginner-friendly ordering journey.</p>
         </div>
       </div>
     </section>
@@ -148,62 +153,88 @@
         </div>
 
         <div class="category-grid">
-          <article class="category-card" data-search="chips namkeen snacks wafers masala crunchy">
-            <img src="./assets/snacks.jpg" alt="Chips and namkeen display at Satnam Stores">
+          <article class="category-card">
+            <img src="./assets/catalog/amul-taaza.png" alt="Amul Taaza milk pack">
             <div class="category-content">
-              <h3>Chips &amp; Namkeen</h3>
-              <p>Crispy everyday favorites for quick cravings and family snack time.</p>
+              <h3>Dairy Essentials</h3>
+              <p>Milk, dahi, and butter for breakfast, tea-time, and everyday home cooking.</p>
             </div>
           </article>
-          <article class="category-card" data-search="biscuits cookies bakery treats">
-            <img src="./assets/sweets.jpg" alt="Biscuits and sweets shelf at Satnam Stores">
+          <article class="category-card">
+            <img src="./assets/catalog/coca-cola.jpg" alt="Coca-Cola bottle product pack">
             <div class="category-content">
-              <h3>Biscuits &amp; Cookies</h3>
-              <p>Tea-time classics, cream biscuits, and quick sweet bites ready to grab.</p>
+              <h3>Snacks &amp; Beverages</h3>
+              <p>Cold drink favorites and quick add-ons for everyday refreshment and impulse buys.</p>
             </div>
           </article>
-          <article class="category-card" data-search="cold drinks soda water juice beverages drinks">
-            <img src="./assets/drinks.jpg" alt="Cold drinks fridge at Satnam Stores">
+          <article class="category-card">
+            <img src="./assets/catalog/fortune-atta.png" alt="Fortune atta pack">
             <div class="category-content">
-              <h3>Cold Drinks</h3>
-              <p>Chilled soft drinks, juices, and water bottles stocked for instant refreshment.</p>
+              <h3>Atta &amp; Pantry</h3>
+              <p>Kitchen basics like atta and cooking oil for regular household restocking.</p>
             </div>
           </article>
-          <article class="category-card" data-search="ice cream frozen bars cones cups desserts">
-            <img src="./assets/icecream.jpg" alt="Ice cream freezer with assorted products">
+          <article class="category-card">
+            <img src="./assets/catalog/britannia-bread.png" alt="Britannia whole wheat bread pack">
             <div class="category-content">
-              <h3>Ice Cream</h3>
-              <p>Cups, cones, and frozen treats for kids, guests, and weekend indulgence.</p>
+              <h3>Bakery</h3>
+              <p>Bread and quick tea-time bakery picks that fit daily breakfast and snack routines.</p>
             </div>
           </article>
-          <article class="category-card" data-search="chocolates candy toffee sweets treats">
-            <img src="./assets/interior.jpg" alt="Interior shelves with chocolates and candy">
+          <article class="category-card">
+            <img src="./assets/catalog/maggi-noodles.png" alt="Maggi noodles pack">
             <div class="category-content">
-              <h3>Chocolates &amp; Candy</h3>
-              <p>Impulse favorites near the counter and shelf-ready treats for every age group.</p>
+              <h3>Instant Meals</h3>
+              <p>Fast-cook options and convenient meal picks for busy evenings and quick cravings.</p>
             </div>
           </article>
-          <article class="category-card" data-search="sweets mithai dessert bites">
-            <img src="./assets/sweets.jpg" alt="Shelf with sweets and packaged snack items">
+          <article class="category-card">
+            <img src="./assets/catalog/chings-soy-sauce.png" alt="Ching's dark soy sauce bottle">
             <div class="category-content">
-              <h3>Sweets</h3>
-              <p>Sweet picks and snackable packaged treats that round out daily purchases.</p>
+              <h3>Indian / International</h3>
+              <p>Sauces and pantry add-ons that make noodles, stir-fries, and quick meals easier.</p>
             </div>
           </article>
-          <article class="category-card" data-search="instant snacks ready to eat noodles munchies">
-            <img src="./assets/interior.jpg" alt="Store interior with packed shelves">
-            <div class="category-content">
-              <h3>Instant Snacks</h3>
-              <p>Quick-serve munchies and easy picks when customers want convenience first.</p>
-            </div>
-          </article>
-          <article class="category-card" data-search="daily essentials pantry staples home basics">
-            <img src="./assets/interior.jpg" alt="Store shelves carrying daily essentials">
-            <div class="category-content">
-              <h3>Daily Essentials</h3>
-              <p>Pantry basics and routine household needs kept close for fast neighborhood runs.</p>
-            </div>
-          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section ordering-section" id="catalog">
+      <div class="container">
+        <div class="section-heading order-heading">
+          <div>
+            <p class="eyebrow eyebrow-blue">Order Online</p>
+            <h2>Browse the product catalog and build your cart</h2>
+            <p>Search, filter, add items, and send the final order directly on WhatsApp.</p>
+          </div>
+          <div class="ordering-summary-card">
+            <p class="summary-label">Current cart</p>
+            <strong data-cart-count>0 items</strong>
+            <span data-cart-total>Rs 0</span>
+            <button class="button button-primary" type="button" data-open-cart>Checkout</button>
+          </div>
+        </div>
+
+        <div class="catalog-toolbar">
+          <div class="filter-chip-row" id="product-filters" aria-label="Product filters">
+            <button class="filter-chip is-active" type="button" data-filter="all">All Products</button>
+            <button class="filter-chip" type="button" data-filter="Dairy Essentials">Dairy Essentials</button>
+            <button class="filter-chip" type="button" data-filter="Snacks & Beverages">Snacks &amp; Beverages</button>
+            <button class="filter-chip" type="button" data-filter="Atta & Pantry">Atta &amp; Pantry</button>
+            <button class="filter-chip" type="button" data-filter="Bakery">Bakery</button>
+            <button class="filter-chip" type="button" data-filter="Indian / International Groceries">Indian / International</button>
+            <button class="filter-chip" type="button" data-filter="Chocolates & Candy">Chocolates &amp; Candy</button>
+            <button class="filter-chip" type="button" data-filter="Frozen Treats">Frozen Treats</button>
+            <button class="filter-chip" type="button" data-filter="featured">Featured</button>
+            <button class="filter-chip" type="button" data-filter="instock">In Stock</button>
+          </div>
+          <p class="catalog-result" id="catalog-result-text">Showing all products</p>
+        </div>
+
+        <div class="catalog-grid" id="product-grid" aria-live="polite"></div>
+        <div class="catalog-empty is-hidden" id="catalog-empty">
+          <h3>No products match that search right now.</h3>
+          <p>Try another category or a broader search term.</p>
         </div>
       </div>
     </section>
@@ -218,29 +249,29 @@
         <div class="deals-grid">
           <article class="deal-banner deal-blue">
             <div>
-              <span class="deal-tag">Cooler Picks</span>
-              <h3>Cold Drinks Ready to Chill</h3>
-              <p>Chilled bottles, cans, and water options ready for warm Indore afternoons.</p>
+              <span class="deal-tag">Fresh Refill</span>
+              <h3>Dairy and Pantry Refill Picks</h3>
+              <p>Milk, dahi, butter, atta, and oil lined up for quick household top-ups and repeat orders.</p>
             </div>
-            <a class="button button-yellow" href="#top-picks">Shop Drinks</a>
+            <a class="button button-yellow" href="#catalog">Shop Staples</a>
           </article>
 
           <article class="deal-banner deal-yellow">
             <div>
               <span class="deal-tag">Value Snacks</span>
-              <h3>Snack Time Favorites</h3>
-              <p>Popular chips, namkeen, and biscuits that make everyday stops feel stocked up.</p>
+              <h3>Drink and Quick Add-On Picks</h3>
+              <p>Cold drinks, bread, noodles, and pantry add-ons that make each order more complete.</p>
             </div>
-            <a class="button button-dark" href="#categories">Browse Snacks</a>
+            <a class="button button-dark" href="#catalog">Browse Essentials</a>
           </article>
 
           <article class="deal-banner deal-navy">
             <div>
-              <span class="deal-tag">Frozen Treats</span>
-              <h3>Ice Cream Treats</h3>
-              <p>Frozen bars, cups, and cones lined up for family evenings and quick sweet breaks.</p>
+              <span class="deal-tag">Fast Meals</span>
+              <h3>Instant Grocery Convenience</h3>
+              <p>Noodles and sauces for quick home meals, paired with daily-use basics that people reorder often.</p>
             </div>
-            <a class="button button-secondary-light" href="#gallery">See Freezer</a>
+            <a class="button button-secondary-light" href="#catalog">See More</a>
           </article>
         </div>
       </div>
@@ -251,56 +282,56 @@
         <div class="section-heading">
           <p class="eyebrow eyebrow-blue">Top Picks</p>
           <h2>Bestsellers that keep the store moving</h2>
-          <p>Product-style cards inspired by larger grocery platforms, adapted to the store’s real range.</p>
+          <p>Retail-style highlights that connect the brand story with what customers actually order.</p>
         </div>
 
         <div class="product-grid">
           <article class="product-card">
             <span class="product-badge">Best Seller</span>
-            <img src="./assets/snacks.jpg" alt="Popular chips and namkeen products">
+            <img src="./assets/catalog/amul-taaza.png" alt="Amul Taaza milk pack">
             <div class="product-body">
-              <h3>Popular Chips</h3>
-              <p>Colorful rack favorites for school snacks, travel, and daily cravings.</p>
+              <h3>Amul Taaza Milk</h3>
+              <p>A fast-moving daily essential for tea, breakfast, and everyday kitchen use.</p>
             </div>
           </article>
           <article class="product-card">
             <span class="product-badge">Popular</span>
-            <img src="./assets/drinks.jpg" alt="Soft drinks in a refrigerator">
+            <img src="./assets/catalog/coca-cola.jpg" alt="Coca-Cola bottle product">
             <div class="product-body">
-              <h3>Soft Drinks</h3>
-              <p>Cold beverages, sodas, and chilled refreshment ready to grab on the way out.</p>
+              <h3>Coca-Cola</h3>
+              <p>A familiar chilled drink pick for quick refreshment and add-on convenience.</p>
             </div>
           </article>
           <article class="product-card">
-            <span class="product-badge">Frozen Pick</span>
-            <img src="./assets/icecream.jpg" alt="Ice cream bars and frozen desserts">
+            <span class="product-badge">Kitchen Pick</span>
+            <img src="./assets/catalog/fortune-atta.png" alt="Fortune atta pack">
             <div class="product-body">
-              <h3>Ice Cream Bars</h3>
-              <p>Fast-selling frozen treats for families, kids, and summer evening walks.</p>
+              <h3>Whole Wheat Atta</h3>
+              <p>A core pantry staple that supports repeat grocery orders and family meal planning.</p>
             </div>
           </article>
           <article class="product-card">
             <span class="product-badge">Everyday</span>
-            <img src="./assets/sweets.jpg" alt="Biscuits and packaged treats on shelves">
+            <img src="./assets/catalog/amul-butter.jpeg" alt="Amul butter pack">
             <div class="product-body">
-              <h3>Biscuits</h3>
-              <p>Easy tea-time staples and quick sweet bites kept ready on visible shelves.</p>
+              <h3>Amul Butter</h3>
+              <p>An everyday breakfast and cooking pick that customers instantly recognize.</p>
             </div>
           </article>
           <article class="product-card">
-            <span class="product-badge">Quick Treat</span>
-            <img src="./assets/interior.jpg" alt="Shelf area with chocolates and candy">
+            <span class="product-badge">Quick Refill</span>
+            <img src="./assets/catalog/britannia-bread.png" alt="Britannia whole wheat bread pack">
             <div class="product-body">
-              <h3>Chocolates</h3>
-              <p>Counter-friendly chocolates and candy for gifting, cravings, and impulse add-ons.</p>
+              <h3>Whole Wheat Bread</h3>
+              <p>A practical bakery item for breakfast, snacks, and fast sandwich meals.</p>
             </div>
           </article>
           <article class="product-card">
-            <span class="product-badge">Family Pick</span>
-            <img src="./assets/interior.jpg" alt="Interior shelves with mixed grocery products">
+            <span class="product-badge">Quick Meal</span>
+            <img src="./assets/catalog/maggi-noodles.png" alt="Maggi noodles pack">
             <div class="product-body">
-              <h3>Quick Snacks</h3>
-              <p>Grab-and-go shelf staples for busy days when convenience matters most.</p>
+              <h3>Maggi Noodles</h3>
+              <p>A trusted instant meal essential for busy days, kids, and late-evening cravings.</p>
             </div>
           </article>
         </div>
@@ -318,22 +349,22 @@
           <article class="benefit-card">
             <span>01</span>
             <h3>Quick grab-and-go shopping</h3>
-            <p>Fast stops for drinks, snacks, treats, and urgent essentials without hassle.</p>
+            <p>Fast stops for groceries, drinks, snacks, and urgent essentials without hassle.</p>
           </article>
           <article class="benefit-card">
             <span>02</span>
             <h3>Wide variety in one place</h3>
-            <p>Multiple snack, beverage, frozen, and daily-use categories inside one compact store.</p>
+            <p>Dairy, drinks, bakery, pantry, and instant grocery categories under one roof.</p>
           </article>
           <article class="benefit-card">
             <span>03</span>
-            <h3>Cold drinks always stocked</h3>
-            <p>Visible fridge selection with chilled refreshment ready throughout the day.</p>
+            <h3>Trusted branded essentials</h3>
+            <p>Recognizable products like Amul, Britannia, Fortune, Maggi, and Coca-Cola help build trust.</p>
           </article>
           <article class="benefit-card">
             <span>04</span>
             <h3>Family-friendly products</h3>
-            <p>Items that work for kids, parents, guests, and routine household runs.</p>
+            <p>Items that work for tea-time, breakfast, quick meals, and routine home refills.</p>
           </article>
           <article class="benefit-card">
             <span>05</span>
@@ -342,8 +373,8 @@
           </article>
           <article class="benefit-card">
             <span>06</span>
-            <h3>Fast service</h3>
-            <p>A local store experience that still feels polished, clear, and easy to trust.</p>
+            <h3>WhatsApp ordering</h3>
+            <p>A simple order flow for pickup or delivery without needing an app or account.</p>
           </article>
         </div>
       </div>
@@ -375,7 +406,7 @@
           </figure>
           <figure class="gallery-card">
             <img src="./assets/sweets.jpg" alt="Sweets and biscuits shelves">
-            <figcaption>Sweets shelves</figcaption>
+            <figcaption>Bakery and sweets shelves</figcaption>
           </figure>
           <figure class="gallery-card">
             <img src="./assets/icecream.jpg" alt="Ice cream freezer">
@@ -391,42 +422,124 @@
           <p class="eyebrow">Visit Store</p>
           <h2>Satnam Stores</h2>
           <p>16-A, Prem Nagar, Indore, MP</p>
-          <p>Phone: <a href="tel:+919926552340">+91 9926552340</a></p>
-          <p>Stop in for snacks, drinks, sweets, ice cream, biscuits, and everyday home essentials.</p>
+          <p>Phone: <a href="tel:+19199854545">+1 919 985 4545</a></p>
+          <p>Browse in person or order online for pickup and delivery coordination on WhatsApp.</p>
         </div>
         <div class="visit-actions">
-          <a class="button button-primary" href="tel:+919926552340">Call Now</a>
+          <a class="button button-primary" href="tel:+19199854545">Call Now</a>
           <a class="button button-secondary" href="https://www.google.com/maps/search/?api=1&amp;query=16-A%2C+Prem+Nagar%2C+Indore%2C+Madhya+Pradesh" target="_blank" rel="noreferrer">Get Directions</a>
-          <a class="button button-yellow" href="https://wa.me/919926552340" target="_blank" rel="noreferrer">Order Online</a>
+          <button class="button button-yellow" type="button" data-open-cart>Order on WhatsApp</button>
         </div>
       </div>
     </section>
   </main>
 
-  <a class="floating-call" href="tel:+919926552340" aria-label="Call Satnam Stores">Call</a>
+  <div class="cart-overlay" id="cart-overlay" hidden></div>
+
+  <aside class="cart-drawer" id="cart-drawer" aria-labelledby="cart-title" aria-hidden="true">
+    <div class="cart-drawer-header">
+      <div>
+        <p class="eyebrow eyebrow-blue">Your Order</p>
+        <h2 id="cart-title">Cart &amp; Checkout</h2>
+      </div>
+      <button class="cart-close" type="button" aria-label="Close cart" data-close-cart>&times;</button>
+    </div>
+
+    <div class="cart-drawer-body">
+      <section class="cart-section">
+        <div class="cart-section-heading">
+          <h3>Cart items</h3>
+          <button class="text-link" type="button" id="clear-cart-button">Clear cart</button>
+        </div>
+        <div class="cart-empty" id="cart-empty-state">
+          <strong>Your cart is empty</strong>
+          <p>Add products from the catalog to begin your WhatsApp order.</p>
+        </div>
+        <div class="cart-items" id="cart-items"></div>
+        <div class="cart-summary">
+          <div>
+            <span>Subtotal</span>
+            <strong id="cart-subtotal">Rs 0</strong>
+          </div>
+          <p>Final availability and delivery details will be confirmed on WhatsApp.</p>
+        </div>
+      </section>
+
+      <section class="cart-section">
+        <div class="cart-section-heading">
+          <h3>Customer details</h3>
+        </div>
+        <form class="checkout-form" id="checkout-form" novalidate>
+          <div class="form-field">
+            <label for="customer-name">Full Name</label>
+            <input id="customer-name" name="customerName" type="text" required>
+          </div>
+
+          <div class="form-field">
+            <label for="customer-phone">Phone Number</label>
+            <input id="customer-phone" name="customerPhone" type="tel" inputmode="tel" required>
+          </div>
+
+          <div class="form-field">
+            <label for="order-type">Order Type</label>
+            <select id="order-type" name="orderType" required>
+              <option value="">Select order type</option>
+              <option value="Pickup">Pickup</option>
+              <option value="Delivery">Delivery</option>
+            </select>
+          </div>
+
+          <div class="form-field" id="address-field">
+            <label for="customer-address">Address</label>
+            <textarea id="customer-address" name="customerAddress" rows="3" placeholder="Required for delivery orders"></textarea>
+          </div>
+
+          <div class="form-field">
+            <label for="customer-notes">Notes / Special Instructions</label>
+            <textarea id="customer-notes" name="customerNotes" rows="3" placeholder="Optional notes, preferred brands, quantities, or landmarks"></textarea>
+          </div>
+
+          <p class="form-feedback" id="form-feedback" aria-live="polite"></p>
+
+          <button class="button button-primary button-full" id="whatsapp-order-button" type="submit">
+            Send Order on WhatsApp
+          </button>
+        </form>
+      </section>
+    </div>
+  </aside>
+
+  <div class="mobile-cta-bar">
+    <a class="floating-call" href="tel:+19199854545" aria-label="Call Satnam Stores">Call</a>
+    <button class="floating-cart" type="button" data-open-cart aria-label="View cart">
+      View Cart
+      <span class="cart-count-badge" data-cart-count>0</span>
+    </button>
+  </div>
 
   <footer class="site-footer">
     <div class="container footer-grid">
       <div>
         <h3>Satnam Stores</h3>
         <p>16-A, Prem Nagar, Indore, Madhya Pradesh</p>
-        <p><a href="tel:+919926552340">+91 9926552340</a></p>
+        <p><a href="tel:+19199854545">+1 919 985 4545</a></p>
       </div>
       <div>
         <h3>Categories</h3>
         <ul>
-          <li>Snacks</li>
-          <li>Drinks</li>
-          <li>Ice Cream</li>
-          <li>Daily Essentials</li>
+          <li>Dairy Essentials</li>
+          <li>Snacks &amp; Beverages</li>
+          <li>Atta &amp; Pantry</li>
+          <li>Bakery</li>
         </ul>
       </div>
       <div>
         <h3>Store</h3>
         <ul>
-          <li><a href="#categories">Featured categories</a></li>
+          <li><a href="#catalog">Order online</a></li>
+          <li><a href="#deals">Deals &amp; highlights</a></li>
           <li><a href="#top-picks">Top picks</a></li>
-          <li><a href="#visit">Visit store</a></li>
+          <li><a href="./about.html">About us</a></li>
         </ul>
       </div>
     </div>
