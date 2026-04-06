@@ -320,6 +320,7 @@ const orderTypeSelect = document.querySelector("#order-type");
 const addressField = document.querySelector("#address-field");
 const formFeedback = document.querySelector("#form-feedback");
 const currentPage = document.body.dataset.page || "home";
+const initialSearchParams = new URLSearchParams(window.location.search);
 
 let activeFilter = "all";
 let activeQuery = "";
@@ -770,10 +771,18 @@ function smoothScrollToTarget(selector) {
 
 function handleSearchSubmit(event) {
   event.preventDefault();
-  activeQuery = normalizeText(searchInput?.value || "");
+  const submittedQuery = normalizeText(searchInput?.value || "");
+
+  if (currentPage !== "products") {
+    const nextUrl = submittedQuery ? `./products.html?q=${encodeURIComponent(submittedQuery)}` : "./products.html";
+    window.location.href = nextUrl;
+    return;
+  }
+
+  activeQuery = submittedQuery;
   setActiveFilter(activeFilter);
   updateCategoryRail("products");
-  smoothScrollToTarget("#catalog");
+  smoothScrollToTarget("#product-catalog");
 }
 
 if (menuToggle && mobilePanel) {
@@ -817,6 +826,15 @@ filterButtons.forEach((button) => {
 
 if (searchForm && searchInput) {
   searchForm.addEventListener("submit", handleSearchSubmit);
+}
+
+if (searchInput) {
+  const initialQuery = normalizeText(initialSearchParams.get("q") || "");
+  if (initialQuery) {
+    searchInput.value = initialSearchParams.get("q") || "";
+    activeQuery = initialQuery;
+    activeFilter = "all";
+  }
 }
 
 updateCategoryRail(currentPage);
