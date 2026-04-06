@@ -447,11 +447,26 @@ button {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(340px, 520px);
   gap: 28px;
-  align-items: center;
+  align-items: start;
 }
 
 .hero-copy {
-  padding: 26px 0;
+  padding: 10px 0 0;
+  display: grid;
+  gap: 22px;
+}
+
+.hero-benefits-heading {
+  margin-bottom: 0;
+}
+
+.hero-benefits-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.hero-benefits-grid .benefit-card {
+  min-height: 100%;
 }
 
 .eyebrow {
