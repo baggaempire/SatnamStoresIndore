@@ -1575,11 +1575,23 @@ h3 {
   .topbar-inner {
     flex-direction: column;
     align-items: flex-start;
-    padding: 10px 0;
+    gap: 4px;
+    padding: 6px 0;
+  }
+
+  body[data-page="products"] .topbar {
+    font-size: 0.82rem;
+  }
+
+  body[data-page="products"] .topbar-inner {
+    gap: 4px;
+    padding: 6px 0;
   }
 
   .header-main {
     grid-template-columns: 1fr auto;
+    gap: 10px;
+    padding: 8px 0 6px;
   }
 
   .page-utility-banner {
@@ -1589,27 +1601,111 @@ h3 {
 
   .brand {
     min-width: 0;
+    gap: 10px;
+  }
+
+  .brand-badge {
+    width: 54px;
+    height: 54px;
+  }
+
+  body[data-page="products"] .brand {
+    gap: 10px;
+  }
+
+  body[data-page="products"] .brand-badge {
+    width: 54px;
+    height: 54px;
   }
 
   .brand-copy strong {
-    font-size: 1.35rem;
+    font-size: 1.1rem;
   }
 
   .brand-copy span {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
+  }
+
+  .menu-toggle {
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+  }
+
+  body[data-page="products"] .brand-copy strong {
+    font-size: 1.1rem;
+  }
+
+  body[data-page="products"] .brand-copy span {
+    font-size: 0.8rem;
+  }
+
+  body[data-page="products"] .menu-toggle {
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
   }
 
   .search-shell {
     grid-column: 1 / -1;
     order: 3;
+    padding: 5px 5px 5px 12px;
+    gap: 8px;
+  }
+
+  .search-shell input {
+    font-size: 0.95rem;
+  }
+
+  .search-shell button {
+    padding: 10px 16px;
+    min-height: 42px;
+  }
+
+  body[data-page="products"] .search-shell {
+    padding: 5px 5px 5px 12px;
+    gap: 8px;
+  }
+
+  body[data-page="products"] .search-shell input {
+    font-size: 0.95rem;
+  }
+
+  body[data-page="products"] .search-shell button {
+    padding: 10px 16px;
+    min-height: 42px;
   }
 
   .category-strip-wrap {
-    top: 142px;
+    top: 109px;
+  }
+
+  .category-strip {
+    padding: 8px 0;
+    gap: 8px;
+  }
+
+  .category-strip a {
+    padding: 10px 16px;
+    font-size: 0.92rem;
+  }
+
+  body[data-page="products"] .category-strip-wrap {
+    top: 109px;
+  }
+
+  body[data-page="products"] .category-strip {
+    padding: 8px 0;
+    gap: 8px;
+  }
+
+  body[data-page="products"] .category-strip a {
+    padding: 10px 16px;
+    font-size: 0.92rem;
   }
 
   .hero {
-    padding-top: 20px;
+    padding-top: 8px;
   }
 
   .hero-copy {
@@ -1617,36 +1713,73 @@ h3 {
   }
 
   .hero-metrics,
-  .category-grid,
   .product-grid,
-  .benefits-grid,
   .gallery-grid,
   .footer-grid,
-  .catalog-grid,
-  .owner-grid {
+  .catalog-grid {
     grid-template-columns: 1fr;
+  }
+
+  .category-grid,
+  .benefits-grid,
+  .owner-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .category-content,
+  .product-body,
+  .benefit-card,
+  .gallery-card figcaption,
+  .inventory-copy {
+    padding: 14px;
+  }
+
+  .category-content h3,
+  .product-body h3,
+  .benefit-card h3 {
+    font-size: 1rem;
+  }
+
+  .category-content p,
+  .product-body p,
+  .benefit-card p,
+  .gallery-card figcaption {
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+
+  .benefit-card {
+    gap: 10px;
+    padding: 16px;
+  }
+
+  .benefit-card span {
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
   }
 
   body[data-page="products"] .catalog-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 14px;
-  }
-
-  body[data-page="products"] .inventory-card {
-    border-radius: 20px;
-  }
-
-  body[data-page="products"] .inventory-card img {
-    aspect-ratio: 1 / 1;
-  }
-
-  body[data-page="products"] .inventory-copy {
-    padding: 14px;
     gap: 10px;
   }
 
+  body[data-page="products"] .inventory-card {
+    border-radius: 18px;
+  }
+
+  body[data-page="products"] .inventory-card img {
+    aspect-ratio: 0.88 / 1;
+  }
+
+  body[data-page="products"] .inventory-copy {
+    padding: 10px;
+    gap: 8px;
+  }
+
   body[data-page="products"] .inventory-header {
-    gap: 6px;
+    gap: 4px;
   }
 
   body[data-page="products"] .inventory-header p,
@@ -1655,27 +1788,34 @@ h3 {
     display: none;
   }
 
+  body[data-page="products"] .inventory-header h3 {
+    font-size: 0.88rem;
+    line-height: 1.08;
+    letter-spacing: -0.03em;
+  }
+
   body[data-page="products"] .inventory-price strong {
-    font-size: 1.1rem;
+    font-size: 0.95rem;
   }
 
   body[data-page="products"] .inventory-price span {
-    font-size: 0.8rem;
+    font-size: 0.72rem;
   }
 
   body[data-page="products"] .inventory-meta {
     align-items: flex-start;
-    gap: 8px;
+    gap: 6px;
   }
 
   body[data-page="products"] .stock-pill {
-    font-size: 0.66rem;
-    padding: 5px 8px;
+    font-size: 0.58rem;
+    padding: 4px 7px;
   }
 
   body[data-page="products"] .add-cart-button {
-    min-height: 40px;
-    font-size: 0.92rem;
+    min-height: 34px;
+    font-size: 0.82rem;
+    padding: 0 10px;
   }
 
   .products-hero {
@@ -1697,6 +1837,29 @@ h3 {
     justify-content: flex-start;
   }
 
+  body[data-page="products"] .products-ordering-section {
+    padding-top: 12px;
+  }
+
+  body[data-page="products"] .catalog-toolbar {
+    gap: 10px;
+    margin-bottom: 14px;
+  }
+
+  body[data-page="products"] .filter-chip-row {
+    gap: 8px;
+    padding-bottom: 2px;
+  }
+
+  body[data-page="products"] .filter-chip {
+    padding: 10px 14px;
+    font-size: 0.9rem;
+  }
+
+  body[data-page="products"] .catalog-result {
+    font-size: 0.92rem;
+  }
+
   .hero-card {
     position: static;
     max-width: none;
@@ -1708,22 +1871,22 @@ h3 {
   }
 
   .hero-visual img {
-    min-height: 280px;
+    min-height: 220px;
   }
 
   .about-hero-visual img,
   .store-detail-visual img {
-    min-height: 280px;
+    min-height: 220px;
   }
 
   .section {
-    padding: 58px 0;
+    padding: 40px 0;
   }
 
   .visit-grid,
   .trusted-grid,
   .cart-section {
-    padding: 24px;
+    padding: 18px;
   }
 
   .button,
